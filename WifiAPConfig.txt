@@ -1,0 +1,23 @@
+>>> import network
+>>> station = network.WLAN(network.STA_IF) 
+>>> access_point = network.WLAN(network.AP_IF)
+>>> station.active()
+False
+>>> station.active(True)
+>>> station.scan()
+[(xxxxxxxxxxxxxx)]
+>>> access_point.active()
+True
+>>> access_point.ifconfig()
+('192.168.4.1', '255.255.255.0', '192.168.4.1', '208.67.222.222')
+
+
+>>> access_point.config('essid')
+'MicroPython-xxxxx'
+>>> access_point.config('authmode')
+4
+>>> access_point.config(essid='new_net_name', password='new_password')
+>>> access_point.config('password')
+Traceback (most recent call last):
+ File "<stdin>", line 1, in <module>
+ ValueError: unknown config param

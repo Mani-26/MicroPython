@@ -21,7 +21,7 @@ def web_page():
     height:68px
     }
     .switch input{
-    display.none
+    display:none
     }
     .slider{
     position:absolute;
@@ -68,7 +68,7 @@ def web_page():
       <input type="checkbox" onchange="togglecheckbox(this)" %s>
       <span class="slider"></span>
       </label>
-    </body></html>"""
+    </body></html>""" % (led_state)
   return html
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
